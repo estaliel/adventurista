@@ -1,0 +1,1344 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Indie+Flower&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lilita+One&family=Pangolin&family=Permanent+Marker&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rowdies:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 10;
+}
+
+.navbar-logo {
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+   margin-right:auto;
+   margin-left:10px;
+   font-family:'Barlow',sans-serif;
+   font-weight:900;
+   font-style:normal;
+}
+
+.navbar-links {
+    list-style-type: none;
+    display: flex;
+    font-family:'Barlow',sans-serif;
+    font-weight:300;
+    font-style:normal;
+}
+
+.navbar-links li {
+    margin-left: 20px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.navbar-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.navbar-links a:active{
+    background-color: rgba(44, 255, 237, 0.623);
+    color:rgb(24, 0, 133);
+
+
+    
+}
+.navbar-links a.active{
+    background-color: rgba(44, 255, 237, 0.623);
+    color:rgb(133, 0, 89);
+
+}
+/*hero section*/
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Necessary for absolute positioning of the video */
+    overflow: hidden; /* Hides any excess content outside the container */
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    width: 100%; /* Set video width to viewport width */
+    height: 100%; /* Set video height to viewport height */
+    object-fit: cover; /* Ensures the video fills the container */
+    transform: translate(-50%, -50%) scaleX(1.2); /* Scale width by 1.2 times */
+    z-index: 0;
+    
+}
+.carousel-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 45%; /* Adjustable width */
+    overflow: hidden; /* Hide overflowing content */
+    border-radius: 8px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    /* Use flex-grow to allow cards to maintain size and not shrink */
+}
+
+.carousel-item {
+    flex: 0 0 35%; /* Fixed width of each card */
+    margin-right: 10px; /* Margin between cards */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    opacity: 1;
+}
+
+.carousel-item:last-child {
+    margin-right: 0; /* Remove margin on the last card */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-item p {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.carousel-item.fade-out {
+    opacity: 0;
+}
+
+.carousel-item:hover {
+    transform: scale(1.05);
+}
+/* Explore Button */
+.explore-button {
+    position: absolute;
+    bottom: 30px;
+    left: 60px;
+    padding: 10px 20px 15px;
+    font-size: 30px;
+    background-color: #921026;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family:'Barlow',sans-serif;
+    font-style:normal;
+    font-weight:700;
+}
+
+.explore-button:hover {
+    background-color: #4caeff;
+    color:black;
+}
+.divider {
+    border: none;
+    height: 10px;
+    background-color: #000000; /* Customize color */
+    width: 100%; /* Customize width as needed */
+    position:absolute;
+    z-index: 5; /* Higher z-index to keep it above other elements */
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 1); /* Creates a shadow that lifts the element */
+
+
+    
+}
+.divider2 {
+    border: none;
+    height: 10px;
+    background-color: #000000; /* Customize color */
+    width: 100%; /* Customize width as needed */
+    position:absolute;
+    z-index: 5; /* Higher z-index to keep it above other elements */
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 1); /* Creates a shadow that lifts the element */
+
+
+    
+}
+.info-section {
+    padding: 20px;
+    background-image:url('bgg.jpg');
+    background-size:cover;
+    text-align: center;
+    margin-top: 0px;
+    height: 700px;
+}
+
+.carousel-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 920px;
+    overflow: hidden;
+    margin:auto;
+    margin-top:60px;
+    margin-bottom:100px;
+}
+
+.small-carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 10px;
+    
+}
+
+.small-item {
+    flex: 0 0 200px;
+    margin: 0 5px; /* Gap between images */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.small-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+   
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.prev-btn { left: -25px; }
+.next-btn { right: -25px; }
+
+.sentences p {
+    font-size:1.3rem;
+    margin: 8px 0;
+    line-height:40px;
+    font-family: "Roboto Condensed", sans-serif;
+    color:rgb(34, 7, 7);
+    font-weight: 700;
+    letter-spacing: 1px;;
+}
+/* Section layout */
+/* First Section styling */
+.first-section {
+     background-image: url('bgbackground1.jpg');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image within the section */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100%; /* Ensures the section spans the full width */
+    min-height: 100vh; /* Ensures the section takes up the full viewport height */
+    padding: 40px;
+    text-align: left;
+    padding-bottom: 200px;
+    box-sizing: border-box; /* Includes padding in the section's height and width */
+
+}
+.section-title{
+ width:800px;
+ padding-top:30px;
+ margin-bottom: 50px;
+ font-size:55px;
+ letter-spacing: 5px;
+margin-right:60px;
+ margin-left:auto;
+
+}
+/* Title Styling */
+.section-title h2 {
+    
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:#ccc;
+ 
+}
+.section-title p{
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color:#05cf82;
+}
+
+/* Content Styling */
+.content {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+  
+    width:900px;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+/* Image Container */
+.image-container {
+    flex-shrink: 0;
+    width: 250px; /* Set width of the image container */
+    margin-right: -30px; /* Negative margin to overlap with the caption */
+    position: relative;
+    z-index: 1; /* Bring the image above the caption */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Caption Styling */
+.caption {
+    width: 800px;
+    height: 200px;
+    padding-left: 60px; /* Space between image and caption */
+    margin-top: 100px;
+    position: relative;
+    z-index: 0;
+    font-size: 1em;
+    color: #333;
+    padding-right:20px;
+    padding-top:20px;
+    background-color:white; /* Solid white to transparent */
+    border-radius:0 20px 20px 0 ;
+    border: 5px solid #05c2cf ;
+  
+    
+}
+.caption h1{
+    font-size: 40px;
+    background: linear-gradient(to right, black, rgb(0, 18, 117));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.caption p{
+    margin-top:20px;
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(71, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:18px;
+}
+
+/* Hover Effect on Image */
+.image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+}
+/*content2*/
+.content2 {
+    display: flex;
+    justify-content: flex-end; /* Align content2 to the right */
+    align-items: flex-start; /* Align items at the start */
+    width: 900px;
+    margin-top: 20px;
+    margin-left: auto; /* Auto margin to push it to the right */
+    margin-right:30px;
+}
+
+/* Image Container for Content 2 */
+.image-container2 {
+    flex-shrink: 0;
+    width: 250px; /* Set width of the image container */
+    margin-right: -30px; /* Negative margin to overlap with the caption */
+    position: relative;
+    z-index: 1; /* Bring the image above the caption */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Caption Styling for Content 2 */
+.caption2 {
+    width: 800px;
+    height: 200px;
+    padding-left: 60px; /* Space between image and caption */
+    margin-top: 100px;
+    position: relative;
+    z-index: 0;
+    font-size: 1em;
+    color: #333;
+    padding-top: 30px;
+    background-color:white; /* Solid white to transparent */
+    border-radius:20px 0   0  20px;
+    border: 5px solid #05cf82;
+    padding-right:40px;
+    text-align: end;
+    
+}
+.caption2 h1{
+    font-size: 40px;
+    background: linear-gradient(to left, black, rgb(0, 82, 31));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.caption2 p {
+    margin-top: 20px;
+    background: linear-gradient(to left, black, rgb(0, 105, 44));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:18px;
+}
+
+/* Hover Effect on Image */
+.image-container2:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/*second-section*/
+.second-section {
+    background: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 1),rgb(0, 13, 133,0.7), rgb(5, 194, 207,0.6) ,rgb(209, 149, 196,0.7),rgb(204, 204, 204,1)), 
+        url('bgt.jpg'); /* Image URL goes here */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image within the section */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    text-align: center;
+    padding-top:70px;
+    
+    padding-bottom:100px;
+   
+  }
+  
+  .circle-images {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    
+  }
+  
+  .circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+  
+  }
+  
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.5); /* Blue overlay */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family:'Barlow', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+  }
+  .overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 129, 250, 0.5); /* Blue overlay */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family:'Barlow', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+  }
+  .overlay3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 250, 250, 0.5); /* Blue overlay */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family:'Barlow', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+  }
+  .overlayf {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 250, 167, 0.5); /* Blue overlay */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family:'Barlow', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+  }
+
+  .overlay5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 250, 54, 0.5); /* Blue overlay */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family:'Barlow', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+  }
+  .circle:hover .overlay {
+    opacity: 1;
+  }
+  .circle:hover .overlay2 {
+    opacity: 1;
+  }
+  .circle:hover .overlay3 {
+    opacity: 1;
+  }
+  .circle:hover .overlayf {
+    opacity: 1;
+  }
+  .circle:hover .overlay5 {
+    opacity: 1;
+  }
+  .content-area {
+    margin-top: 100px;
+    width:850px;
+    display: flex; /* Add this */
+  align-items: center; /* Center align items vertically */
+  margin-left:auto;
+  margin-right:auto;
+    background:linear-gradient(to right, #000d85,#361297);
+    height:200px;
+    border-radius:50px;
+    border:3px solid #272727;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4);
+
+  }
+  
+  .content-area img {
+    max-width: 400px;
+    height: auto;
+    margin-right: 20px; /* Add some spacing between the image and text */
+    z-index:1;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+    margin-left:-20px;
+    
+  }
+  .content-texts{
+    
+    width:400px;
+    z-index: 1;
+  }
+  .content-area p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ecd3d3;
+    font-family:'Lato', sans-serif;
+    font-weight:400;
+    font-style:normal;
+
+
+  }
+  .content-area  h1{
+    color:#bed3fc;
+    font-family:'Lilita One', sans-serif;
+    font-style:normal;
+    font-weight:400;
+    font-size:40px;
+    color:#229de4;
+  }
+  .second-title{
+    width:1000px;
+    padding-top:20px;
+    margin-bottom: 90px;
+    letter-spacing: 5px;
+    color:#ccc;
+    margin:auto;
+    padding-bottom:100px;
+    font-size:55px;
+    font-family: 'Rowdies', sans-serif;
+    font-weight:400;
+    font-style:normal;
+   }
+  /* third section*/
+  .third-section {
+
+    margin:auto;
+    padding-top: 50px;
+    background: #ccc;
+    padding-bottom:80px;
+    
+  }
+  
+  .image-column {
+    display: flex;
+    flex-direction: column; /* Stack image and caption vertically */
+    align-items: center;
+    text-align: center;
+    
+    margin:auto;
+    
+  }
+  .image-column img:hover {
+    transform: scale(1.1); /* Slightly increase the size */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    z-index: 10; /* Bring the hovered image to the front */
+  }
+  .image-column img {
+    width: 230px; /* Set width for images */
+    height: 600px;
+    border: 1px solid #ccc; /* Optional border */
+    margin-bottom: 30px; /* Space between image and caption */
+    z-index: 3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-section{
+    gap:20px;
+    justify-content:center; /* Space out the images evenly */
+    align-items: center;
+    display: flex;
+    width:1000px;
+    margin:auto;
+  }
+  .second-title3{
+    width:1300px;
+    padding-top:20px;
+    margin-bottom: 90px;
+    font-size:55px;
+    letter-spacing: 5px;
+    font-family:'Rowdies', sans-serif;
+    font-style:normal;
+    font-weight:400;
+    text-align:center;
+    margin:auto;
+    padding-bottom:100px;
+   }
+   .second-title3 p{
+    color:#272727;
+    font-family:'Barlow', sans-serif;
+    font-style:normal;
+    font-weight:400;
+    font-size:20px;
+    margin-top:40px;
+    
+   }
+   .imagecolumnword {
+    min-height: 400px; /* Adjust to fit the longest title and caption */
+}
+
+.imagecolumnword h2 {
+    font-family: 'Lilita One', sans-serif;
+    font-size: 40px;
+    color: #10155e;
+    padding-bottom: 20px;
+
+}
+
+.caption3 {
+    font-size: 18px;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    margin-top:10px;
+    
+}
+   /*fourth section*/
+   .fourth-section {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom:90px;
+    background: linear-gradient(to bottom, #ccc , #509cff);
+}
+
+.second-title4 {
+    margin-bottom: 20px;
+}
+
+.collage-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    
+    gap: 10px; /* Space between items */
+    width:1080px;
+    margin:auto;
+}
+
+/* Adjust sizes and positions of the items */
+.item1 {
+    grid-column: 1; /* First column */
+    grid-row: 1; /* First row */
+    width: 60%;
+    height: 300px; /* Set height for item 1 */
+    background-size: cover;
+
+}
+
+.item2 {
+    grid-column: 2; /* Second column */
+    grid-row: 1; /* First row */
+    width: 710px;
+    background-size:cover;
+    height: 200px; /* Set height for item 2 */
+   
+    background-position: center;
+    margin-left:-210px;
+}
+
+.item3 {
+    grid-column: 1; /* First column */
+    grid-row: 2; /* Second row */
+    width: 60%;
+    height: 250px; /* Set height for item 3 */
+    background-size: cover;
+
+}
+
+.item4 {
+    grid-column: 2; /* Second column */
+    grid-row: 2; /* Second row */
+    width: 210px;
+    height: 350px; /* Set height for item 4 */
+    background-size: cover;
+    margin-left:-210px;
+    margin-top:-100px;
+}
+
+.item5 {
+    grid-column: 2; /* Second column */
+    grid-row: 2; /* Second row */
+    width: 490px;
+    height: 350px; /* Set height for item 5 */
+    background-size: cover;
+    margin-top:-100px;
+    margin-left:10px;
+
+}
+
+.collage-item {
+    position: relative;
+    transition: transform 0.3s ease; /* Smooth scale effect */
+    overflow: hidden; /* Clipping any content that goes outside */
+}
+.contentoverlay{
+    padding:20px;
+}
+.overlayc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(177, 0, 0, 0.8); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transform: translateX(-100%); /* Default slide from left */
+}
+.overlaycc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(202, 47, 0, 0.8); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transform: translateY(100%); /* Slide in from bottom */
+}
+.overlayccc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(155, 88, 1, 0.8); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transform: translateX(100%); /* Slide in from right */
+}
+.overlaycccc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 105, 47, 0.8); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transform: translateY(-100%); /* Slide in from top */
+}
+.overlayccccc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(72, 0, 82, 0.8); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transform: translateX(-100%); /* Slide in from left */
+}
+
+.collage-item:hover .overlayc {
+    transform: translateX(0); /* Slide to center */
+    opacity: 1;
+}
+.collage-item:hover .overlaycc {
+    transform: translateY(0); /* Slide to center */
+    opacity: 1;
+}
+.collage-item:hover .overlayccc {
+    transform: translateX(0); /* Slide to center */
+    opacity: 1;
+}
+.collage-item:hover .overlaycccc {
+    transform: translateY(0); /* Slide to center */
+    opacity: 1;
+}
+.collage-item:hover .overlayccccc {
+    transform: translateX(0); /* Slide to center */
+    opacity: 1;
+}
+
+.caption4 {
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    font-family:'Lato', sans-serif;
+    font-weight: 400;
+    font-style:normal;
+}
+.contentoverlay h2{
+    margin-bottom: 20px;
+    text-align:left;
+    font-family:'Lilita One', sans-serif;
+    font-weight:400;
+    font-style:normal;
+    font-size:25px;
+}
+.second-title4{
+    width:1000px;
+    padding-top:20px;
+    margin-bottom: 90px;
+    font-size:50px;
+    letter-spacing: 5px;
+    margin:auto;
+    padding-bottom:100px;
+    font-family:'Rowdies', sans-serif;
+    font-weight: 400;
+    font-style:normal;
+   }
+
+   .second-title4 p{
+    color:#272727;
+    font-family:'Barlow', sans-serif;
+    font-style:normal;
+    font-weight:400;
+    font-size:20px;
+    margin-top:40px;
+    
+   }
+
+   /*staycation section*/
+
+   .staycation-section {
+  
+    background-color:#509cff;
+    padding:50px 0px 50px 0px;
+    text-align: center;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width:1200px;
+    margin:auto;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: calc(100% / 3);
+    box-sizing: border-box;
+    padding: 10px;
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 20px;
+    user-select: none;
+}
+
+.nav-button:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.prev {
+    left: 10px;
+
+}
+
+.next {
+    right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .slide {
+        min-width: 100%;
+    }
+}
+.second-title5{
+    width:1000px;
+    padding-top:20px;
+    margin-bottom: 90px;
+    font-size:50px;
+    letter-spacing: 5px;
+    margin:auto;
+    padding-bottom:100px;
+    font-family:'Rowdies', sans-serif;
+    font-weight: 400;
+    font-style:normal;
+   }
+   .second-title5 p{
+    color:#272727;
+    font-family:'Barlow', sans-serif;
+    font-style:normal;
+    font-weight:400;
+    font-size:20px;
+    margin-top:40px;
+    
+   }
+
+   /*about us*/
+   .about-us-section {
+   padding-top:100px;
+   padding-bottom:100px;
+   background-image:  linear-gradient(to right, rgb(84, 182, 149,0.7), rgb(13, 173, 236,0.5), rgb(8, 134, 218,0.7), rgb(16, 21, 94)),url('sea.jpg');
+   background-size: cover, cover; /* Ensures both the image and gradient cover the section */
+   background-position: center, center; /* Center both the image and gradient */
+   background-repeat: no-repeat, no-repeat; /* Prevents both from repeating */
+}
+
+.about-us-container {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between the image and text */
+    margin:auto;
+    
+    width: 1000px;
+}
+
+.about-us-image img {
+    max-width: 300px; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-left:20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Darker box shadow effect */
+    position: relative; /* Set position relative for z-index */
+    z-index: 1; /* Default z-index */
+}
+.about-us-image img:hover {
+    transform: scale(1.05); /* Scale up the image slightly */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+    z-index: 2; /* Bring the image to the front on hover */
+}
+
+.about-us-captions {
+    max-width: 500px; /* Limit the width of the captions */
+    margin-left: 20px; /* Space between image and captions */
+    
+
+}
+
+.about-us-captions h2 {
+    font-size: 54px; /* Heading size */
+    margin-bottom: 30px; /* Space below heading */
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 400;
+    font-style:normal;
+    font-size:60px;
+    color:#ffffff;
+}
+
+.about-us-captions p {
+    font-size: 16px; /* Paragraph size */
+    line-height: 1.5; /* Improve readability */
+    margin-bottom: 10px; /* Space between paragraphs */
+    font-family:'Lato', sans-serif;
+    font-weight:400;
+    font-style:normal;
+    font-size:18px;
+    color:#ccc;
+}
+/*contacts*/
+.contact-section {
+   
+    padding-bottom: 150px;
+    padding-top: 60px;
+    background:linear-gradient(to bottom, #05c2cf, #000000);
+}
+.contact-section-title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom:80px;
+    text-align: center;
+    font-family:'Rowdies', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.contact-card-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:1080px;
+    gap:50px;
+    margin:auto;
+}
+.contact-card {
+    text-align: center;
+    position: relative;
+    width: 150px;
+}
+
+.contact-image {
+    width: 100%;
+    border-radius: 10px 10px 0 0 ;
+    display: block;
+}
+
+/* Reflection image */
+.reflection-image {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transform: scaleY(-1); /* Flip the image */
+    opacity: 0.4; /* Adjust reflection opacity */
+    filter: blur(1px); /* Add slight blur for reflection effect */
+    position: relative;
+    margin-top: -5px;
+    mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5),  rgba(255, 255, 255, 0));
+}
+
+
+.contact-info {
+    margin-top: 40px;
+}
+
+.contact-title {
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    font-family:'Lilita One', sans-serif;
+    font-style:normal;
+}
+
+.contact-caption {
+    margin-top:40px;
+    font-size: 18px;
+    color: #ffffff;
+    font-family:'Lato', sans-serif;
+    font-weight:400;
+    font-style:normal;
+
+}
+/* footer*/
+/* Footer Styles */
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-family:'Barlow', sans-serif;
+    font-weight:900;
+    font-style:normal;
+    letter-spacing: 3px;
+}
+
+.footer-column p, .footer-column a {
+    font-size: 16px;
+    color: #ccc;
+    text-decoration: none;
+    margin: 5px 0;
+    font-family:'Barlow', sans-serif;
+    font-weight:400;
+    font-style: normal;
+}
+
+.footer-column a:hover {
+    color: #ddd;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover img {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #999;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+/*modal 
+/* Basic styling for buttons */
+.buttons-container {
+    text-align: center;
+    margin: 20px 0;
+    font-family:'Lato', sans-serif;
+    font-weight:400;
+    font-size:10px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-family:'Lato', sans-serif;
+    font-weight:400;
+    font-size:20px;
+    margin-top:20px;
+    background-color: #921026;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+  
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 174, 197, 0.3);
+    z-index:10;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #8daeeb;
+    margin: 5% auto;
+    padding: 10px 20px 20px 10px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    text-align: justify;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    align-items: center;
+}
+
+.modal-image {
+    width: 50%;
+    margin-right: 20px;
+    border-radius: 8px;
+    height:500px;
+    
+}
+
+.modal-text {
+    width: 60%;
+}
