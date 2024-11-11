@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventurista</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+      <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html"><img src="adventurista_logo.png" style="width:80px;margin-top:10px;"></a>
+        <div class="navbar-logo">
+            
+            
+            <h1>Adventurista</h1>
+        </div>
+        <ul class="navbar-links">
+            <li><a href="index.html" id="homeLink">Home</a></li>
+            <li><a href="#Natural" onclick="smoothScroll('Natural')" >Explore</a></li>
+            <li><a href="policies.html" id="policiesLink">Policies</a></li>
+            <li><a href="#About" onclick="smoothScroll('About')">About</a></li>
+            <li><a href="#contact" onclick="smoothScroll('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero" id="hero-section">
+        <video autoplay muted loop class="hero-video">
+            <source src="videohero3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1 id="place-name"></h1>
+        <p id="place-details"></p>
+        <a href="#head"><button class="explore-button" onclick="smoothScroll('head')">Explore</button></a>
+    </div>
+    
+
+    <div class="carousel-container">
+        <div class="carousel" id="carousel">
+            <div class="carousel-item" onclick="updateHeroAndRotate(this, 'coverbiliran.jpg')">
+                <img src="card_biliran.jpg" alt="Mount Fuji">
+            </div>
+            <div class="carousel-item" onclick="updateHeroAndRotate(this, 'coverleyte.jpg')">
+                <img src="card_leyte.jpg" alt="Eiffel Tower">
+            </div>
+            <div class="carousel-item" onclick="updateHeroAndRotate(this, 'covereastsamar.jpg')">
+                <img src="card_eastsamar.jpg" alt="Grand Canyon">
+            </div>
+            <div class="carousel-item" onclick="updateHeroAndRotate(this, 'covernorthsamar.jpg')">
+                <img src="card_northsamar.jpg" alt="El Nido Palawan">
+            </div>
+            <div class="carousel-item" onclick="updateHeroAndRotate(this, 'coversouthsamar.jpg')">
+                <img src="card_southsamar.jpg" alt="El Nido Palawan">
+            </div>
+        </div>
+    </div>
+    <hr class="divider2">
+    <section class="info-section">
+        <div class="carousel-slider" id="head">
+            <button class="prev-btn" onclick="moveCarousel(-1)">&#10094;</button>
+            <div class="small-carousel" id="small-carousel">
+                <div class="small-item"><img src="ev_img1.jpg" alt="Image 1"></div>
+                <div class="small-item"><img src="ev_img2.jpg" alt="Image 2"></div>
+                <div class="small-item"><img src="ev_img3.jpg" alt="Image 3"></div>
+                <div class="small-item"><img src="ev_img4.jpg" alt="Image 4"></div>
+                <div class="small-item"><img src="ev_img5.jpg" alt="Image 5"></div>
+                <div class="small-item"><img src="ev_img6.jpg" alt="Image 6"></div>
+            </div>
+            <button class="next-btn" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+        <div class="sentences" >
+            <p>Region 8, Eastern Visayas, is a captivating part of the Philippines, known for its stunning landscapes and vibrant culture. <br>Encompassing the islands of Leyte, Samar, and Biliran, it boasts pristine beaches, lush forests, and striking mountain ranges.<br> Iconic spots like Kalanggaman Island, with its powdery white sandbars stretching into turquoise waters, <br>and the majestic San Juanico Bridge, connecting Leyte and Samar, showcase the region's natural beauty and architectural wonders. <br>Eastern Visayas is also rich in history and tradition, <br>with a warm and welcoming culture reflected in colorful festivals, traditional dances, and a deep sense of community.<br> It’s a paradise for adventurers, history enthusiasts, and anyone seeking untouched beauty and authenticity.</p>
+           
+        </div>
+
+        <div class="missionvision">
+            <button onclick="openModal('missionModal')">Mission/Vision</button>
+        
+        </div>
+        <!-- Mission Modal -->
+<div id="missionModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('missionModal')">&times;</span>
+        <div class="modal-body">
+            <img src="natural_kalanggaman.jpg" alt="Mission Image" class="modal-image">
+            <div class="modal-text">
+                <h2 style="margin-bottom:50px;text-align: center;font-family:'Lilita One',sans-serif;">Welcome to Adventurista!</h2>
+                <p style="line-height:30px;font-family:'Lato',sans-serif;letter-spacing:1px;">Adventurista is your ultimate guide to the breathtaking wonders of Eastern Visayas. Our vision is to be the ultimate adventure buddy, inspiring travelers to uncover the magic of Eastern Visayas, one breathtaking experience at a time. We're your passport to a world of stunning beaches, historical wonders, and vibrant culture. Our mission is to showcase the region's rich cultural heritage, historical landmarks, and diverse natural beauty. Join us on a journey to explore the hidden gems of Eastern Visayas and experience the resilience of its people. Let us take you on an adventure of a lifetime!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    </section>
+    <hr class="divider">
+    <!-- natural wonders section-->
+    <section class="first-section">
+        <!-- Title -->
+        <div class="section-title">
+            <h2 id="Natural">Natural Wonders</h2>
+            <p>Eastern Visayas is a paradise for nature lovers, boasting a variety of breathtaking landscapes.</p>
+        </div>
+        
+        <!-- Content: Image on the left, caption on the right -->
+        <div class="content">
+            <div class="image-container">
+                <img src="natural_mainit.jpg" alt="Mainit Hot Springs">
+            </div>
+            <div class="caption">
+                <h1>Mainit Hot Springs, Biliran</h1>
+               
+                <p>These hot springs, located in the municipality of Caibiran in Biliran, are a popular place to relax and rejuvenate. The hot water originates from the island's active volcanic and mountainous areas, providing a unique and therapeutic experience.
+                </p>
+            </div>
+        </div>
+        <!-- content2-->
+        <div class="content2">
+           
+            <div class="caption2">
+                <h1>Biliran Volcano (Mt. Suiro)</h1>
+               
+                <p>Standing at 1,300 meters, this dormant volcano is Biliran province's highest peak. It offers hikers breathtaking views of the entire island and is an excellent location for camping and trekking.
+                </p>
+            </div>
+            <div class="image-container2">
+                <img src="natural_volcano.jpg" alt="Mt. Suiro">
+            </div>
+        </div>
+        <div class="content">
+            <div class="image-container">
+                <img src="natural_amandaraga.jpg" alt="Amandaraga Falls">
+            </div>
+            <div class="caption">
+                <h1>Amandaraga Falls, Eastern Samar</h1>
+               
+                <p>This cascading waterfall in Lawaan, Eastern Samar, is named after the flowing waters that resemble maiden's hair (daraga means "maiden" in the local dialect). The nearby Bulu Sao River is a popular swimming and tubing destination.</p>
+            </div>
+        </div>
+        <div class="content2">
+           
+            <div class="caption2">
+                <h1>Kalanggaman Island, Leyte</h1>
+               
+                <p>This pristine island is known for its white sand beaches, crystal-clear waters, and diverse marine life. It's an ideal spot for snorkelling, diving, or simply relaxing in a tropical paradise.
+                </p>
+            </div>
+            <div class="image-container2">
+                <img src="natural_kalanggaman.jpg" alt="Kalanggaman Island">
+            </div>
+        </div>
+        <div class="content">
+            <div class="image-container">
+                <img src="natural_lakedanao.jpg" alt=" Lake Danao">
+            </div>
+            <div class="caption">
+                <h1> Lake Danao, Ormoc City, Leyte</h1>
+               
+                <p>This beautiful volcanic lake is surrounded by lush forests and has breathtaking views. It's a popular spot for kayaking, fishing, and relaxing in nature.</p>
+            </div>
+        </div>
+    </section>
+
+     <!-- Historical Landmark section-->
+     <section class="second-section">
+        <div class="second-title"><h1>Historical Landmarks</h1></div>
+        <!-- Circle images with captions -->
+        <div class="circle-images">
+          <div class="circle" onclick="changeContent(1)" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
+            <img src="landmark_sanjuanico.jpg" alt="San Juanico Bridge">
+            <div class="overlay">San Juanico Bridge</div>
+          </div>
+          <div class="circle" onclick="changeContent(2)" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
+            <img src="landmark_mcarthur.jpg" alt=" MacArthur Landing Memorial">
+            <div class="overlay2">MacArthur Landing Memorial</div>
+          </div>
+          <div class="circle" onclick="changeContent(3)" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
+            <img src="landmark_homonhon.jpg" alt=" Homonhon Island">
+            <div class="overlay3"> Homonhon Island</div>
+          </div>
+          <div class="circle" onclick="changeContent(4)" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
+            <img src="landmark_limasawa.jpg" alt="Limasawa Island">
+            <div class="overlayf">Limasawa Island</div>
+          </div>
+          <div class="circle" onclick="changeContent(5)" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
+            <img src="landmark_biliran.jpg" alt="Biliran Watchtower">
+            <div class="overlay5">Biliran Watchtower</div>
+          </div>
+        </div>
+      
+        <!-- Content area that changes on click -->
+        <div id="content-area" class="content-area">
+          <img id="content-image" src="historical_landmarks.jpg" alt="Default Image">
+          <div class = "content-texts">
+            <h1 id ="content-caption">Historical Landmarks</h1>
+            <p id="content-text">Eastern Visayas is steeped in history, with numerous landmarks that tell the story of the region's past.
+            </p>
+        </div>
+          
+        </div>
+     </section>
+     <!-- rich cultural heritage-->
+     <section class="third-section">
+        <div class="second-title3">
+            <h1>Rich Historical Heritage</h1>
+            <p>Eastern Visayas boasts a vibrant cultural heritage, with unique traditions, festivals, and arts.</p>
+        </div>
+        <div class="image-section">
+        <div class="image-column">
+          <img src="rich_waray.jpg" alt="Waray People">
+          <div class="imagecolumnword">
+          <h2>Waray People</h2>
+          <p class="caption3">The Waray, the indigenous people of Eastern Visayas, are well-known for their warm hospitality, strong community ties, and extensive oral tradition. They have passed down their history, values, and beliefs to future generations.</p>
+        </div></div>
+        <div class="image-column">
+            <img src="rich_buyogan.jpg" alt="Buyogan Festival">
+            <div class="imagecolumnword">
+            <h2>Buyogan Festival</h2>
+            <p class="caption3">This festival in Eastern Samar commemorates the region's rich agricultural heritage. It includes colourful floats, traditional dances, and lively music that reflect the community's pride in its agricultural bounty.</p>
+          </div></div>
+
+        
+
+        <div class="image-column">
+          <img src="rich_sangyaw.jpg" alt="Sang Yaw Festival">
+          <div class="imagecolumnword">
+          <h2>Sang Yaw Festival</h2>
+          <p class="caption3">The Sang Yaw Festival is a significant festival in Tacloban City that honours the city's patron saint, Señor Sto. Niño. It's a hugely popular celebration of faith and cultural heritage.</p>
+        </div></div>
+        <div class="image-column">
+            <img src="rich_pintados.jpg" alt="Pintados-Kasadyaan Festival">
+            <div class="imagecolumnword">
+            <h2>Pintados-Kasadyaan Festival</h2>
+            <p class="caption3">Held annually in Tacloban City, this festival commemorates the region's history and culture. It features colourful costumes, traditional dances, and lively music that capture the Waray people's vibrant spirit.</p>
+          </div></div>
+        <div class="image-column">
+          <img src="rich_handicrafts.jpg" alt="Handicrafts">
+          <div class="imagecolumnword">
+          <h2>Handicrafts</h2>
+          <p class="caption3">Eastern Visayas is known for its skilled artisans who make beautiful and intricate handicrafts such as woven mats, baskets, and furniture. These crafts reflect the region's cultural heritage as well as its people's artistic abilities.</p>
+        </div></div>
+        </div>
+     </section>
+
+     <!-- Famous Delicacies-->
+     <section class="fourth-section">
+        <div class="second-title4">
+            <h1>Famous Delicacies</h1>
+            <p>Eastern Visayas is a culinary paradise, with a diverse range of delicious dishes that will tantalize your taste buds. </p>
+        </div>
+        <div class="collage-container">
+            <div class="collage-item item1" style="background-image: url('delicacies_binagol.jpg');">
+                <div class="overlayc">
+                    <div class="contentoverlay">
+                    <h2>Binagol</h2>
+                    <p class="caption4">This sweet and nutty Leyte delicacy is made with grated coconut, sweetened condensed milk, sugar, and mashed taro or gabi root, all steamed to perfection inside a coconut shell.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="collage-item item2" style="background-image: url('delicacies_lecheflan.jpg');">
+                <div class="overlaycc">
+                    <div class="contentoverlay">
+                        <h2>Waray Leche Flan</h2>
+                        <p class="caption4">This creamy and decadent treat is a unique take on a traditional Filipino dessert. It's made with fresh carabao milk and coconut milk, which gives it a distinct flavour and consistency.</p>
+                        </div>
+                </div>
+            </div>
+            <div class="collage-item item3" style="background-image: url('delicacies_moron.jpg.');">
+                <div class="overlayccc">
+                    <div class="contentoverlay">
+                        <h2>Moron</h2>
+                        <p class="caption4">This sticky rice pudding is similar to suman, but made with coconut milk and cocoa. It's soft and flavourful, with a rich cocoa taste.</p>
+                        </div>
+                </div>
+            </div>
+            <div class="collage-item item4" style="background-image: url('delicacies_suman.jpg');">
+                <div class="overlaycccc">
+                    <div class="contentoverlay">
+                        <h2>Suman Biliran</h2>
+                        <p class="caption4">This delicious suman from Biliran comes in a variety of flavours, including ti nam biran (a combination of white and brown glutinous rice), plain white suman, and suman with mango marmalade.</p>
+                        </div>
+                </div>
+            </div>
+            <div class="collage-item item5" style="background-image: url('delicacies_humba.jpg');">
+                <div class="overlayccccc">
+                    <div class="contentoverlay">
+                        <h2>Humba</h2>
+                        <p class="caption4">This savoury dish consists of pork belly cooked in soy sauce, vinegar, and brown sugar. It is a popular dish in Eastern Visayas, distinguished by its rich and flavourful flavour.</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Where can we stay?-->
+    <section class="staycation-section">
+        <div class="second-title5">
+            <h1>Where to stay?</h1>
+            <p>Eastern Visayas, Philippines, offers beautiful beaches, lush landscapes, and welcoming resorts, perfect for relaxation and adventure alike. </p>
+        </div>
+        <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+                <!-- Add your five images here -->
+                <div class="slide"><img src="hotel_1.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="hotel_rawis.jpg" alt="Image 2"></div>
+                <div class="slide"><img src="hotel_prim.jpg" alt="Image 3"></div>
+                <div class="slide"><img src="hotel_boro.jpg" alt="Image 4"></div>
+                <div class="slide"><img src="hotel_2.jpg" alt="Image 5"></div>
+            </div>
+            <!-- Navigation buttons -->
+            <button class="nav-button prev" onclick="moveSlider(-1)">&#10094;</button>
+            <button class="nav-button next" onclick="moveSlider(1)">&#10095;</button>
+        </div>
+    </section>
+    
+    <!-- About Us-->
+    <hr class="divider2">
+    <section class="about-us-section">
+        <div class="about-us-container">
+            <div class="about-us-image">
+                <img src="PANGET.JPG" alt="About Us Image">
+            </div>
+            <div class="about-us-captions">
+                <h2 id="About">About Us</h2>
+                <p>ADVENTURISTA invites you to embark on a journey through the enchanting Region 8: Eastern Visayas.</p>
+                <p>Our platform showcases the region’s rich cultural heritage, breathtaking attractions, and mouthwatering gastronomy. We celebrate the resilience and warmth of the Eastern Visayan people, providing you with an immersive guide to their wonders.</p>
+                <p>Let your adventure begin here!       </p>
+            </div>
+        </div>
+        </section>  
+        <hr class="divider">
+    <!-- Contacts -->
+    <section class="contact-section">
+        <h2 class="contact-section-title" id="contact">Our Contacts</h2>
+        <div class="contact-card-container">
+        <div class="contact-card">
+            <img src="fb.jpg" alt="Contact Image 1" class="contact-image"><!-- Change both contact1.jpg if you want to change pictures-->
+            <img src="fb.jpg" alt="Reflection of Contact Image 1" class="reflection-image">
+            <div class="contact-info">
+                <h3 class="contact-title">Facebook</h3> <!-- Put contact name here-->
+                <a href="https://www.facebook.com/people/Explore-Adventurista/61555521032204/?mibextid=ZbWKwL"><p class="contact-caption">ADVENTURISTA</p></a><!-- Put the contacts here-->
+            </div>
+        </div>
+        <div class="contact-card">
+            <img src="insta2.jpg" alt="Contact Image 2" class="contact-image"> <!-- Same as the previous one and the next ones-->
+            <img src="insta2.jpg" alt="Reflection of Contact Image 2" class="reflection-image">
+            
+            <div class="contact-info">
+                <h3 class="contact-title"> Instagram</h3>
+                <a href="https://www.instagram.com/explore.adventurista/profilecard/"><p class="contact-caption">EXPLORE.ADVENTURISTA</p></a>
+            </div>
+        </div>
+        <div class="contact-card">
+            <img src="call.jpg" alt="Contact Image 3" class="contact-image">
+            <img src="call.jpg" alt="Reflection of Contact Image 3" class="reflection-image">
+         
+            <div class="contact-info">
+                <h3 class="contact-title"> Mobile No.</h3>
+                <p class="contact-caption">0967 446 0297</p>
+            </div>
+        </div>
+        <div class="contact-card">
+            <img src="gmail.jpg" alt="Contact Image 4" class="contact-image">
+            <img src="gmail.jpg" alt="Reflection of Contact Image 4" class="reflection-image">
+            
+            <div class="contact-info">
+                <h3 class="contact-title">Gmail</h3>
+                <p class="contact-caption">explore.adventurista@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    <!-- Footer-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>A Journey Through Nature, History, Culture, and Cuisine<br></p>
+                <p style="font-size:10px;margin-top:20px;">This guide will provide five examples of Diverse <br>Natural Wonders, Historical Landmarks, Rich Cultural Heritage, and Famous Delicacies to help you plan your unforgettable trip.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#head">Explore</a></li>
+                    <li><a href="policies.html">Policies</a></li>
+                    <li><a href="#About">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: explore.adventurista@gmail.com</p>
+                <p>Phone: 0967 446 0297</p>
+                <p>Address:34 Mt. Pinatubo Ext. Post Proper Southside Taguig City</p><!-- Put your address here-->
+            </div>
+            
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61555521032204&mibextid=ZbWKwL"><img src="facebook-icon.png" alt="Facebook"></a> <!-- Social Media links put it in # remove # replace it with your link-->
+                    <a href="#"><img src="x-icon.png" alt="X"></a> <!-- If you want to change the social media to use replace the picture of icon-->
+                    <a href="https://www.instagram.com/explore.adventurista/profilecard/"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="pinterest-icon.png" alt="Pinterest"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Adventurista. All rights reserved.</p>
+        </div>
+    </footer>
+    
+      
+      
+    <script src="script.js"></script>
+</body>
+</html>
